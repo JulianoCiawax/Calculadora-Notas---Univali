@@ -1,21 +1,35 @@
+<!-- 
+Criado por Juliano Costa
+jctecnologias.com.br
+contato@jctecnologias.com.br
+Projeto Open Source
+Apenas me de créditos. 
+-->
+
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de Média</title>
+    <!-- Link para o CSS do Bootstrap -->
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- Link para o CSS personalizado -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Container principal -->
     <div class="container mt-5">
+      <!-- Título principal -->
       <h1 class="text-center mb-4">Calculadora de Média</h1>
 
+      <!-- Seção M1 -->
       <div id="m1-container">
         <h2>M1</h2>
+        <!-- Inputs para nota e peso de M1 -->
         <div id="m1-inputs" class="form-group">
           <label for="nota-m1">Nota:</label>
           <input type="text" id="nota-m1" class="form-control mb-2" />
@@ -25,14 +39,17 @@
             Adicionar Nota
           </button>
         </div>
+        <!-- Resultado parcial de M1 (inicialmente oculto) -->
         <div id="resultado-m1" class="mt-2" style="display: none">
           <h3>Resultado M1</h3>
           <p id="resultado-m1-texto" class="lead"></p>
         </div>
       </div>
 
+      <!-- Seção M2 (inicialmente oculta) -->
       <div id="m2-container" class="mt-4" style="display: none">
         <h2>M2</h2>
+        <!-- Inputs para nota e peso de M2 -->
         <div id="m2-inputs" class="form-group">
           <label for="nota-m2">Nota:</label>
           <input type="text" id="nota-m2" class="form-control mb-2" />
@@ -42,14 +59,17 @@
             Adicionar Nota
           </button>
         </div>
+        <!-- Resultado parcial de M2 (inicialmente oculto) -->
         <div id="resultado-m2" class="mt-2" style="display: none">
           <h3>Resultado M2</h3>
           <p id="resultado-m2-texto" class="lead"></p>
         </div>
       </div>
 
+      <!-- Seção M3 (inicialmente oculta) -->
       <div id="m3-container" class="mt-4" style="display: none">
         <h2>M3</h2>
+        <!-- Inputs para nota e peso de M3 -->
         <div id="m3-inputs" class="form-group">
           <label for="nota-m3">Nota:</label>
           <input type="text" id="nota-m3" class="form-control mb-2" />
@@ -59,27 +79,28 @@
             Adicionar Nota
           </button>
         </div>
+        <!-- Resultado parcial de M3 (inicialmente oculto) -->
         <div id="resultado-m3" class="mt-2" style="display: none">
           <h3>Resultado M3</h3>
           <p id="resultado-m3-texto" class="lead"></p>
         </div>
       </div>
 
-      <button
-        id="proximo-m1"
-        class="btn btn-secondary mt-3"
-        onclick="proximo('m1')"
-      >
+      <!-- Botões de navegação -->
+      <!-- Botão para ir para M2 -->
+      <button id="proximo-m1" class="btn btn-info mt-3" onclick="proximo('m1')">
         Próximo M2
       </button>
+      <!-- Botão para ir para M3 (inicialmente oculto) -->
       <button
         id="proximo-m2"
-        class="btn btn-secondary mt-3"
+        class="btn btn-info mt-3"
         style="display: none"
         onclick="proximo('m2')"
       >
         Próximo M3
       </button>
+      <!-- Botão para calcular a média (inicialmente oculto) -->
       <button
         id="calcular"
         class="btn btn-success mt-3"
@@ -89,13 +110,16 @@
         Calcular Média
       </button>
 
+      <!-- Resultado final (inicialmente oculto) -->
       <div id="resultado" class="mt-4" style="display: none">
         <h2>Resultado Final</h2>
         <p id="resultado-texto" class="lead"></p>
       </div>
 
+      <!-- Histórico de notas (inicialmente oculto) -->
       <div id="historico" class="mt-5" style="display: none">
         <h2>Histórico de Notas</h2>
+        <!-- Tabela de histórico -->
         <table class="table table-striped table-bordered">
           <thead class="thead-dark">
             <tr>
@@ -106,17 +130,20 @@
               <th>Ação</th>
             </tr>
           </thead>
-          <tbody id="historico-tbody">
-            <!-- Linhas de histórico serão adicionadas aqui -->
-          </tbody>
+          <tbody id="historico-tbody"></tbody>
         </table>
+        <!-- Botão para resetar tudo -->
         <button class="btn btn-danger mt-3" onclick="resetarTudo()">
           Resetar Tudo
         </button>
       </div>
     </div>
+    <!-- Inclusão de scripts -->
+    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Script personalizado -->
     <script src="script.js"></script>
   </body>
 </html>
