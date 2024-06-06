@@ -20,3 +20,7 @@ Esta aplicação permite ao usuário adicionar notas e pesos para três período
 - CSS
 - JavaScript
 - Bootstrap 4.5.2
+
+## Testar projeto.
+
+https://julianociawax.github.io/Calculadora-Notas---Univali/
